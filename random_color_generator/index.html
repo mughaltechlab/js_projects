@@ -11,9 +11,16 @@
 <body>
     <div class="rcg-container">
         <div class="hex-container">
-            <button>Create Hex Color</button>
+            <p class="hex-value">#ffffff</p>
+            <button class="hex-btn">Create Hex Color</button>
+            <button class="hex-copy-value">Copy hex Value</button>
+
         </div>
         <div class="rgb-container">
+
+            <!-- <div class="val"> -->
+                <p class="rgb-value">rgb(0,0,0)</p>
+            <!-- </div> -->
 
             <div>
                 <label for="red">Red</label>
@@ -27,11 +34,16 @@
                 <label for="blue">Blue</label>
                 <input type="range" min="0" max="255" value="0" id="blue">
             </div>
+            <button class="rgb-btn">Create RGB Color</button>
+            <button class="rgb-copy-value">Copy RGB Value</button>
             
             
 
         </div>
     </div>
+
+
+    <script src="./script.js"></script>
 </body>
 
 </html>
