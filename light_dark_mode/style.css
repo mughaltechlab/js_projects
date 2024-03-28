@@ -1,0 +1,35 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+.container{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.container.light{
+    background: #f4f4f4;
+    color: steelblue;
+}
+.container.dark{
+    background: #383737;
+    color: #fff;
+}
+button{
+    all: unset;
+    cursor: pointer;
+    padding: 10px 20px;
+    box-shadow: 0 0 2px #383737;
+    border-radius: 6px;
+    border: 1px solid #fff;
+    background: #000;
+    margin-top: 20px;
+}
+.container.light button{
+    border-color: transparent;
+}
