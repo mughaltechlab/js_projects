@@ -1,3 +1,15 @@
+:root{
+    --bg-color: #fff;
+    --color: #6f9ec5;
+    --border-color: transparent;
+}
+
+[data-theme = "dark"]{
+    --bg-color: #383737;
+    --color: #fff;
+    --border-color: #fff;
+}
+
 *{
     margin: 0;
     padding: 0;
@@ -11,25 +23,27 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    background: var(--bg-color);
+    color: var(--color);
 }
-.container.light{
+/* .container.light{
     background: #f4f4f4;
     color: steelblue;
 }
 .container.dark{
     background: #383737;
     color: #fff;
-}
+} */
 button{
     all: unset;
     cursor: pointer;
     padding: 10px 20px;
     box-shadow: 0 0 2px #383737;
     border-radius: 6px;
-    border: 1px solid #fff;
+    border: 1px solid var(--border-color);
     background: #000;
     margin-top: 20px;
 }
-.container.light button{
+/* .container.light button{
     border-color: transparent;
-}
+} */
