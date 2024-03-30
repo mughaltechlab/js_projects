@@ -1,0 +1,85 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    min-height: 100vh;
+    width: 100%;
+    background: linear-gradient(-45deg, rgb(70, 69, 69), rgba(70, 69, 69, .5));
+}
+button{
+    all: unset;
+    padding: 10px 20px;
+    background: gold;
+    background: linear-gradient(-45deg, rgb(239, 222, 123), rgba(239, 222, 123, .5));
+    border-radius: 6px;
+    cursor: pointer;
+    border: 2px solid gold;
+}
+.btns button:nth-child(1){
+    background: #fff;
+}
+.btns button:nth-child(1):hover{
+    background: gold;
+}
+button:hover{
+    background: gold;
+}
+.openModal{
+    /* display: block;
+    margin-inline: auto; */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: none;
+}
+.modalBg{
+    display: none;
+    position: fixed;
+    background: rgba(255, 255, 255, .4);
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+.modal{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 400px;
+    padding: 20px;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    gap: 40px;
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(70, 69, 69, .5);
+}
+.modal p{
+    text-align: center;
+}
+.modal .btns{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+.modal .btns button{
+    width: 100%;
+    text-align: center;
+}
+.closeIcon{
+    align-self: flex-end;
+    cursor: pointer;
+    font-size: 18px;
+    color: gray;
+    transition: .3s;
+}
+.closeIcon:hover{
+    color: #111;
+}
