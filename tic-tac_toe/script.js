@@ -29,6 +29,9 @@ for(let i = 0; i < boxes.length; i++){
             currentPlayer = '';
             return;
         }
+        if (checkTie()) {
+            msg.textContent = 'Game Tied..!';
+        }
         // logic for changing player
         currentPlayer = currentPlayer === player[0] ? player[1] : player[0];
 
@@ -89,3 +92,12 @@ function checkWinner(currentPlayer){
     return false;
 }
 
+function checkTie(){
+    for(let i = 0; i < boxes.length ; i++){
+        if (boxes[i].textContent === '') {
+            return false;
+        }
+
+    }
+    return true;
+}
