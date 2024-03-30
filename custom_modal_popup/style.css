@@ -35,18 +35,7 @@ button:hover{
     left: 50%;
     transform: translate(-50%, -50%);
     border: none;
-    animation-name: animeModal;
-    animation-duration: 1s;
-}
-@keyframes animeModal{
-    from{
-        top: -200px;
-        opacity: 0;
-    }
-    from{
-        top: 50%;
-        opacity: 1;
-    }
+    
 }
 .modalBg{
     display: none;
@@ -72,6 +61,18 @@ button:hover{
     gap: 40px;
     border-radius: 12px;
     box-shadow: 0 0 10px rgba(70, 69, 69, .5);
+    animation-name: animeModal;
+    animation-duration: .44s;
+}
+@keyframes animeModal{
+    from{
+        top: -200px;
+        opacity: 0;
+    }
+    to{
+        top: 50%;
+        opacity: 1;
+    }
 }
 .modal p{
     text-align: center;
