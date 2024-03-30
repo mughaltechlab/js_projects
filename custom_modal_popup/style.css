@@ -35,6 +35,18 @@ button:hover{
     left: 50%;
     transform: translate(-50%, -50%);
     border: none;
+    animation-name: animeModal;
+    animation-duration: 1s;
+}
+@keyframes animeModal{
+    from{
+        top: -200px;
+        opacity: 0;
+    }
+    from{
+        top: 50%;
+        opacity: 1;
+    }
 }
 .modalBg{
     display: none;
