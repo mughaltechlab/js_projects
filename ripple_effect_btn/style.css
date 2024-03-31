@@ -1,0 +1,49 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+.container{
+    width: 100%;
+    min-height: 100vh;
+    background:linear-gradient(to top, rgb(112, 112, 112), rgba(112, 112, 112, .6))  rgb(111, 111, 246);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+button{
+    all: unset;
+    height: 50px;
+    width: 300px;
+    text-align: center;
+    background: rgb(10, 151, 151);
+    color: #fff;
+    font-weight: 600;
+    letter-spacing: 2px;
+    font-size: 20px;
+    border-radius: 12px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+button > span{
+    position: absolute;
+    border-radius: 12px;
+    width: 500px;
+    height: 500px;
+    background: rgba(255, 255, 255, 0.386);
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    animation: spanAnime .33s linear;
+}
+@keyframes spanAnime {
+    from{
+        height: 0;
+        width: 0;
+    }
+    to{
+        height: 500px;
+        width: 100%;
+    }
+}
