@@ -1,0 +1,92 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif;
+}
+body{
+    min-height: 100vh;
+    width: 100%;
+    background: linear-gradient(to top, rgb(129, 124, 124), rgba(129, 124, 124,.5));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container{
+    text-align: center;
+}
+.progress__container{
+    display: flex;
+    justify-content: space-between;
+    max-width: 100%;
+    width: 400px;
+    margin-bottom: 40px;
+    position: relative;
+    font-size: larger;
+}
+.progress__container::before{
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    height: 5px;
+    width: 100%;
+    background: #000;
+    z-index: -1;
+}
+.progress{
+    position: absolute;
+    top: 50%;
+    left: 0%;
+    transform: translateY(-50%);
+    height: 5px;
+    width: 0%;
+    background: tomato;
+    z-index: -1;
+    transition: .44s linear;
+}
+.icon__wrapper{
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    background: #f7f1f1;
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.icon__wrapper.active{
+    background: gold;
+}
+.icon__wrapper i{
+    position: absolute;
+    bottom: 25px;
+    font-size: 20px;
+}
+.icon__wrapper .label{
+    position: absolute;
+    bottom: -30px;
+}
+
+button{
+    all: unset;
+    padding: 10px 20px;
+    /* background: #fff; */
+    border: 2px solid #000;
+    border-radius: 4px;
+    cursor: pointer;
+    color: #fff;
+    font-weight: 900;
+    text-shadow: 0 0 2px #000;
+    transition: 0.12s linear ;
+}
+button:hover{
+    border-color: #fff;
+    color: #000;
+    text-shadow: 0 0 3px #fff;
+}
+button:disabled{
+    opacity: .45;
+    cursor: not-allowed;
+}
