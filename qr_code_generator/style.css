@@ -1,0 +1,90 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+.container{
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(-45deg, rgb(148, 89, 244), rgba(148, 89, 244, .5));
+    padding-top: 50px;
+}
+.container h1{
+    text-align: center;
+    color: ghostwhite;
+}
+.errorMsg{
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgb(250, 72, 8);
+    color: #fff;
+    padding: 10px 20px;
+    text-align: center;
+    animation: errorAnime .4s ease-in-out ;
+}
+@keyframes errorAnime {
+    from{
+        left: -100%;
+    }
+    to{
+        left: 0;
+    }
+}
+.qrWrapper{
+    width: 500px;
+    height: auto;
+    margin-inline: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+input, button {
+    all: unset;
+}
+.qrWrapper input{
+    background: ghostwhite;
+    padding: 6px 12px;
+    width: 300px;
+    border-radius: 4px;
+    margin-top: 10px;
+}
+.qrWrapper button{
+    background: rgb(148, 89, 244);
+    color: #fff;
+    /* color: rgb(148, 89, 244); */
+    border: 2px solid #fff;
+    padding: 10px 20px;
+    margin: 20px auto;
+    box-shadow: 0 0 8px rgba(148, 89, 244, .5);
+    cursor: pointer;
+    border-radius: 6px;
+    transition: 100ms linear;
+    font-weight: 600;
+    background: #fff;
+    color: rgb(148, 89, 244);
+    border-color: rgb(141, 73, 252);    
+}
+.qrWrapper button:hover{
+    box-shadow: 0 0 10px rgba(0, 0, 0, .5);
+}
+.qrContainer{
+    display: none;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid ghostwhite;
+    animation-name: qrAnime;
+    animation-duration: .3s;
+}
+@keyframes qrAnime {
+    from{
+        transform: scale(0);
+    }
+    to{
+        transform: scale(1);
+    }
+}
