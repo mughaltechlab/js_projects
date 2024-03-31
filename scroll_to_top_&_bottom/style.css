@@ -1,0 +1,23 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+.container{
+    min-height: 100vh;
+    width: 100%;
+    padding: 20px 50px;
+    text-align: justify;
+    background: linear-gradient(-45deg, rgb(123, 123, 248), rgba(123, 123, 248,.5));
+    color: #fff;
+    font-weight: 600;
+}
+button{
+    all: unset;
+    padding: 10px 20px;
+    background: #fff;
+    color: blueviolet;
+    margin: 30px auto;
+    cursor: pointer;
+}
