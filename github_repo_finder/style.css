@@ -1,0 +1,66 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+input, button, a{
+    all: unset;
+}
+.container{
+    width: 100%;
+    min-height: 100vh;
+    background: ghostwhite;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+}
+.searchWrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid;
+    /* padding: 20px 0; */
+    height: 30px;
+}
+.searchWrapper input{
+    padding-inline-start: 10px;
+}
+.searchWrapper button{
+    border-left: 1px solid;
+    height: 30px;
+    padding: 0 10px;
+    cursor: pointer;
+}
+.card{
+    margin-top: 30px;
+    width: 400px;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    background: linear-gradient(-45deg, grey, white);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+    border-radius: 12px;
+}
+.card img{
+    width: 150px;
+    height: 150px;
+    border-radius: 20px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.4);
+}
+.card .detail{
+    display: flex;
+    flex-direction: column;
+}
+ .detail .profBtn{
+    margin-block-start: auto;
+    cursor: pointer;
+    width: 100%;
+    background: #fff;
+    border: 1px solid black;
+    text-align: center;
+    padding-block: 8px;
+}
