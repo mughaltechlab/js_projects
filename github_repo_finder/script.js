@@ -13,8 +13,11 @@ async function fetchGithubUser(){
     const resp = await fetch(url);
     const user = await resp.json();
 
-    card.innerHTML = `<img src="${user.avatar_url}" alt="user's rofile image">
-    <div class="detail">
+    card.style.display = 'flex';
+
+    if (resp.ok) {
+        card.innerHTML = `<img src="${user.avatar_url}" alt="user's rofile image">
+        <div class="detail">
         
         <h1>${user.name}</h1>
         
@@ -25,6 +28,10 @@ async function fetchGithubUser(){
         <p>Repo: ${user.public_repos}</p>
         <!-- profile url -->
         <p class="profBtn"><a href="${user.html_url}">Go to Profile</a></p>
-    </div>`;
-    console.log(user);
+        </div>`;
+    }
+    else{
+        card.innerHTML = 'Please enter a correct repo username';
+    }
+        console.log(resp.ok);
 }

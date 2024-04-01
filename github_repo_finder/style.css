@@ -44,6 +44,7 @@ input, button, a{
     background: linear-gradient(-45deg, grey, white);
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
     border-radius: 12px;
+    display: none;
 }
 .card img{
     width: 150px;
