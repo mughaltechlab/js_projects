@@ -1,0 +1,106 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+.container{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+header{
+    background: ghostwhite;
+    /* height: 100px; */
+    padding: 20px 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .5);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 50px;
+}
+header nav ul{
+    list-style: none;
+    display: flex;
+    column-gap: 20px;
+}
+nav a{
+    all: unset;
+    cursor: pointer;
+    text-transform: uppercase;
+    padding: 10px;
+    /* border-bottom: 5px ; */
+}
+nav a:hover{
+    background: salmon;
+}
+main{
+    padding: 40px 0;
+    flex-grow: 1;
+    background: #00000057;
+
+}
+.mainWrapper{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 20px;
+    padding: 20px;
+    max-width: 1024px;
+    margin-inline: auto;
+
+    @media (max-width:800px){
+        grid-template-columns: repeat(2,1fr);
+    }
+    @media (max-width:500px){
+        grid-template-columns: 1fr;
+    }
+}
+.mainWrapper  > div{
+    margin-inline: auto;
+    background: linear-gradient(-45deg, rgb(255, 255, 255), rgba(255, 255, 255, .5)) gray;
+    width: 300px;
+    height: 300px;
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .5);
+    overflow: hidden;
+    @media (max-width:500px){
+        width: 100%;
+    }
+}
+.mainWrapper > div img{
+    transition: .33s linear;
+}
+.mainWrapper > div:hover img{
+    transform: scale(1.2);
+}
+button{
+    all: unset;
+    padding: 10px 20px;
+    background: #fff;
+    border: 2px solid black;
+    margin-inline: auto;
+    display: block;
+    font-weight: 600;
+    cursor: pointer;
+    transition: .11s;
+}
+button:hover{
+    background: linear-gradient(rgb(190, 187, 187), rgba(190, 187, 187,.4)) rgb(97, 91, 91);
+    border-color: #fff;
+    color: #fff;
+}
+footer{
+    margin-block-start: auto;
+    background: ghostwhite;
+    height: 50px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
