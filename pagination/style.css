@@ -1,0 +1,72 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    color: #111111;
+}
+.container{
+    min-height: 100vh;
+    width: 100%;
+    background: #f4f4f4;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+header{
+    padding: 20px 0;
+    text-align: center;
+    background: #11111111;
+    width: 100%;
+}
+header h1{text-transform: uppercase;}
+main{
+    height: 100%;
+    width: 100%;
+    flex-grow: 1;
+}
+.mainWrapper{
+    max-width: 1024px;
+    margin-inline: auto;
+    padding: 50px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.hide-item{
+    display: none;
+}
+
+.cardsList{
+    list-style: none;
+    display: grid;
+    column-gap: 30px;
+    row-gap: 30px;
+    grid-template-columns: repeat(3,1fr);
+}
+.cardsList li {
+    width: 200px;
+    height: 200px;
+    background: #11111111;
+    text-align: center;
+    padding-block-start: 50%;
+    padding-block-end: 50%;
+    border-radius: 6px;
+    border: 1px solid #eee;
+    box-shadow: 0 0 15px rgba(114, 113, 113, 0.3);
+}
+.paginationWrapper{
+    display: flex;
+    justify-content: center;
+    column-gap: 20px;
+    padding-block: 20px;
+    /* margin-block-start: auto; */
+}
+footer{
+    padding-block: 25px;
+    width: 100%;
+    text-align: center;
+    background: #11111111;
+}

@@ -56,7 +56,6 @@ function handleEnableBtn(getBtn){
     getBtn.classList.remove('disable');
     getBtn.removeAttribute('disabled');
 }
-
 function handlePaginationButtonStatus(){
     if (currentPage === 1) {
         handleDisableBtn(prevBtn);
@@ -89,5 +88,28 @@ function handleCurrentPage(getCurrentPageNumber){
     });
 }
 
+
 createPaginationNumbers();
 handleCurrentPage(1);
+
+prevBtn.addEventListener('click',()=>{
+    handleCurrentPage(currentPage - 1);
+});
+
+nextBtn.addEventListener('click',()=>{
+    handleCurrentPage(currentPage + 1);
+});
+
+document.querySelectorAll('.paginationNumber').forEach((btn,index)=>{
+    btn.addEventListener('click',(e)=>{
+        document.querySelectorAll('.paginationNumber').forEach(mybtn=>{
+            mybtn.classList.remove('active-state');
+        })
+        btn.classList.add('active-state');
+        const pgAttr = e.target.getAttribute('page-index');
+        currentPage = pgAttr;
+        console.log(pgAttr);
+        handleCurrentPage(currentPage);
+        
+    });
+});
