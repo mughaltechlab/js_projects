@@ -104,6 +104,10 @@ main{
     background: #11111111;
     color: #111111;
 }
+.paginationNumbers button.active-state{
+    background: #11111166;
+    color: #f4f4f4;
+}
 footer{
     padding-block: 25px;
     width: 100%;
