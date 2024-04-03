@@ -54,15 +54,55 @@ main{
     padding-block-start: 50%;
     padding-block-end: 50%;
     border-radius: 6px;
-    border: 1px solid #eee;
+    /* border: 1px solid #eee; */
     box-shadow: 0 0 15px rgba(114, 113, 113, 0.3);
+    animation: borderAnime 2500ms ease-in-out infinite alternate;
+}
+@keyframes borderAnime{
+    0%{border: 5px solid transparent;}
+    25%{
+        border-top: 5px solid whitesmoke;
+    }
+    50%{
+        border-top: 5px solid whitesmoke;
+        border-right: 5px solid whitesmoke;
+    }
+    75%{
+        border-top: 5px solid whitesmoke;
+        border-right: 5px solid whitesmoke;
+        border-bottom: 5px solid whitesmoke;
+    }
+    100%{
+        border-top: 5px solid whitesmoke;
+        border-right: 5px solid whitesmoke;
+        border-bottom: 5px solid whitesmoke;
+        border-left: 5px solid whitesmoke;
+    }
 }
 .paginationWrapper{
     display: flex;
     justify-content: center;
+    align-items: center;
     column-gap: 20px;
     padding-block: 20px;
     /* margin-block-start: auto; */
+}
+.paginationWrapper button{
+    all: unset;
+    cursor: pointer;
+    background: #11111166;
+    padding: 5px 10px;
+    border-radius: 4px;
+    color: #f4f4f4;
+}
+.paginationWrapper button:disabled{
+    opacity: .5;
+    cursor: no-drop;
+}
+.paginationNumbers button{
+    margin-inline: 2px;
+    background: #11111111;
+    color: #111111;
 }
 footer{
     padding-block: 25px;

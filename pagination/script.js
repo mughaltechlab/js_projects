@@ -86,6 +86,8 @@ function handleCurrentPage(getCurrentPageNumber){
             item.classList.remove('hide-item');
         }
     });
+
+    handleScrollTop();
 }
 
 
@@ -100,16 +102,36 @@ nextBtn.addEventListener('click',()=>{
     handleCurrentPage(currentPage + 1);
 });
 
-document.querySelectorAll('.paginationNumber').forEach((btn,index)=>{
-    btn.addEventListener('click',(e)=>{
-        document.querySelectorAll('.paginationNumber').forEach(mybtn=>{
-            mybtn.classList.remove('active-state');
-        })
-        btn.classList.add('active-state');
-        const pgAttr = e.target.getAttribute('page-index');
-        currentPage = pgAttr;
-        console.log(pgAttr);
-        handleCurrentPage(currentPage);
+// document.querySelectorAll('.paginationNumber').forEach((btn,index)=>{
+//     btn.addEventListener('click',(e)=>{
+//         document.querySelectorAll('.paginationNumber').forEach(mybtn=>{
+//             mybtn.classList.remove('active-state');
+//         })
+//         btn.classList.add('active-state');
+//         const pgAttr = e.target.getAttribute('page-index');
+//         currentPage = pgAttr;
+//         console.log(pgAttr);
+//         handleCurrentPage(currentPage);
         
-    });
+//     });
+// });
+
+
+document.querySelectorAll('.paginationNumber').forEach(btn=>{
+    const getCurrentPageIndex = Number(btn.getAttribute('page-index'));
+
+    if (getCurrentPageIndex) {
+        btn.addEventListener('click',()=>{
+            handleCurrentPage(getCurrentPageIndex);
+            // handleScrollTop();
+        })
+    }
 });
+
+
+function handleScrollTop(){
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth',
+        });
+}
