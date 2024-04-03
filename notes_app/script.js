@@ -153,6 +153,7 @@ function addItem(e){
             if (isEditBtn.contains('edit')) {
                 setUpdate = e;
                 newItem.value = text;
+                newItem.focus();
             }
         });
     });
