@@ -1,6 +1,10 @@
 const url = 'https://dummyjson.com/recipes';
 
 const recipeWrapper = document.querySelector('.recipe__wrapper');
+const footerYear = document.querySelector('footer .year');
+
+const date = new Date();
+footerYear.innerHTML = date.getFullYear();
 
 // modal variables
 const modalBg = document.querySelector('.modal__bg');
@@ -119,3 +123,10 @@ function fetchCurrentRecipeBtnData(index, recipe){
 
 // close modal
 modalClose.addEventListener('click',()=>modalBg.style.display='none');
+
+window.addEventListener('click',(e)=>{
+    const check = e.target.classList;
+    if (check.contains('modal__bg')) {
+        modalBg.style.display = 'none';
+    }
+})
